@@ -25,3 +25,13 @@ Q1.6 -
 - Explication : si des produits appartiennent à la catégorie 1, `ON DELETE RESTRICT` empêche sa suppression.
 -Q2.4
 Il permet d’effectuer les conversions des données puis de retourner un objet créé avec le constructeur principal
+
+### Q3.2 — DatabaseHelper
+
+**(1)** Deux appels à `DatabaseHelper()` renvoient le même objet grâce au singleton. Le constructeur `factory` retourne l’instance existante.
+
+**(2)** `??=` affecte une valeur uniquement si la variable vaut `null`.
+
+**(3)** `onConfigure` active les clés étrangères à chaque ouverture de la base, tandis que `onCreate` s’exécute seulement à sa création.
+
+**(4)** `onCreate` est appelé une fois par création de la base, puis à nouveau si elle est supprimée et recréée.
